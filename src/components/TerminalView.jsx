@@ -204,8 +204,8 @@ export default function TerminalView({ onExit }) {
         >
           {/* Welcome message */}
           <div className="terminal-welcome">
-            <p>Welcome to Shivansh's Portfolio Terminal! 🚀</p>
-            <p>Type <span style={{ color: "var(--accent-green)" }}>help</span> to see available commands or <span style={{ color: "var(--accent-purple)" }}>ask &lt;question&gt;</span> to chat with AI.</p>
+            <h1 className="terminal-welcome-title">ASK ABOUT ME</h1>
+            <p className="terminal-welcome-subtitle">Here is an AI terminal, play with it.</p>
           </div>
 
           {/* Command history */}
