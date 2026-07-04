@@ -6,7 +6,7 @@ export default function App() {
   const [showTerminal, setShowTerminal] = useState(false);
 
   return (
-    <div className="min-h-screen">
+    <div className="page-enter">
       {!showTerminal ? (
         <PortfolioLanding onEnter={() => setShowTerminal(true)} />
       ) : (
