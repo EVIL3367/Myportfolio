@@ -89,7 +89,12 @@ export default async function handler(req, res) {
   const apiKey = process.env.MISTRAL_API_KEY || process.env.VITE_MISTRAL_API_KEY;
 
   if (!apiKey) {
-    return res.status(500).json({ error: "Mistral API key not configured on the server." });
+    // Provide a helpful debug message to see if the key exists under a different name or wasn't loaded
+    const envKeys = Object.keys(process.env);
+    const mistralKeys = envKeys.filter(k => k.toLowerCase().includes("mistral"));
+    return res.status(500).json({ 
+      error: `Mistral API key not configured on the server. Found related keys: [${mistralKeys.join(', ')}]. Make sure the variable is checked for the 'Production' environment in Vercel.` 
+    });
   }
 
   try {
