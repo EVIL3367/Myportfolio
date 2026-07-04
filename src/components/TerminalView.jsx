@@ -227,7 +227,11 @@ export default function TerminalView({ onExit }) {
           {/* Loading indicator for AI */}
           {loading && (
             <div className="terminal-loading">
-              ⏳ Thinking<span className="terminal-loading-dots" />
+              <span className="pacman"></span>
+              <span className="pacman-dot"></span>
+              <span className="pacman-dot"></span>
+              <span className="pacman-dot"></span>
+              <span style={{ marginLeft: "1rem" }}>Executing command...</span>
             </div>
           )}
 

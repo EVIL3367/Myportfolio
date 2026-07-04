@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import TerminalView from "./components/TerminalView";
 import PortfolioLanding from "./components/PortfolioLanding";
+import MatrixLoader from "./components/MatrixLoader";
+import TerminalView from "./components/TerminalView";
 
 export default function App() {
-  const [showTerminal, setShowTerminal] = useState(false);
+  // 'landing' | 'loading' | 'terminal'
+  const [view, setView] = useState("landing");
 
   return (
     <div className="page-enter">
-      {!showTerminal ? (
-        <PortfolioLanding onEnter={() => setShowTerminal(true)} />
-      ) : (
-        <TerminalView onExit={() => setShowTerminal(false)} />
-      )}
+      {view === "landing" && <PortfolioLanding onEnter={() => setView("loading")} />}
+      {view === "loading" && <MatrixLoader onComplete={() => setView("terminal")} />}
+      {view === "terminal" && <TerminalView onExit={() => setView("landing")} />}
     </div>
   );
 }

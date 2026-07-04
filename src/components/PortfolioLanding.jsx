@@ -1,86 +1,73 @@
 import React, { useEffect, useState } from "react";
-import ParticleCanvas from "./ParticleCanvas";
 
 const ROLES = [
-  "SDET & Automation Engineer",
-  "Backend Developer",
-  "Security Testing Specialist",
-  "Compliance Tester",
-  "AI Integration Engineer",
+  "SDET & AUTOMATION ENGINEER",
+  "BACKEND DEVELOPER",
+  "SECURITY TESTING SPECIALIST",
+  "COMPLIANCE TESTER",
+  "AI INTEGRATION ENGINEER",
 ];
 
 const SKILLS = [
   {
-    icon: "💻",
-    title: "Languages",
-    color: "",
+    title: "LANGUAGES",
     items: ["Java", "Python", "JavaScript", "TypeScript", "C/C++", "SQL"],
   },
   {
-    icon: "🧪",
-    title: "Test Automation",
-    color: "purple",
+    title: "TEST AUTOMATION",
     items: ["Selenium", "Appium", "TestNG", "Pytest", "REST Assured"],
   },
   {
-    icon: "🔧",
-    title: "Backend & APIs",
-    color: "green",
+    title: "BACKEND & APIS",
     items: ["Node.js", "Express.js", "Spring Boot", "Postman", "RESTful APIs", "Mistral API"],
   },
   {
-    icon: "🚀",
-    title: "DevOps & Tools",
-    color: "amber",
+    title: "DEVOPS & TOOLS",
     items: ["Docker", "GitHub Actions", "Git", "CI/CD Pipelines"],
   },
   {
-    icon: "🛡️",
-    title: "Testing Practices",
-    color: "rose",
+    title: "TESTING PRACTICES",
     items: ["Functional Testing", "Regression Testing", "Smoke Testing", "Agile Scrum", "Defect Lifecycle"],
   },
   {
-    icon: "🖥️",
-    title: "Platforms & Other",
-    color: "blue",
+    title: "PLATFORMS & OTHER",
     items: ["Linux", "Windows", "Oracle Fusion", "Oracle EPM", "MS Office"],
   },
 ];
 
 const PROJECTS = [
   {
-    title: "WarpX",
+    title: "WARPX",
     desc: "AI doctor simulation with API + UI automation using Python/Pytest. Integrated Mistral API workflows, CI/CD with GitHub Actions & Docker, and Node.js backend.",
     tech: ["Python", "Pytest", "Node.js", "Mistral API", "Docker"],
   },
   {
-    title: "Cainz",
+    title: "CAINZ",
     desc: "Enterprise Selenium WebDriver automation framework with Java & TestNG. Automated 150+ regression and functional test scenarios with reusable scripts.",
     tech: ["Java", "Selenium", "TestNG"],
   },
   {
-    title: "PetX",
+    title: "PETX",
     desc: "AI-driven mobile app testing across Android & iOS platforms. Automated critical user journeys with Appium and validated AI pet care logic.",
     tech: ["Appium", "Android", "iOS", "Manual Testing"],
   },
   {
-    title: "Journal App",
+    title: "JOURNAL APP",
     desc: "Full-stack journal application with user authentication and CRUD functionality built with the MERN stack.",
     tech: ["MongoDB", "Express.js", "React", "Node.js"],
   },
   {
-    title: "Journal Backend API",
+    title: "JOURNAL BACKEND API",
     desc: "RESTful API service with JWT authentication, MongoDB integration, and Docker deployment using Spring Boot.",
     tech: ["Spring Boot", "JWT", "MongoDB", "Docker"],
   },
 ];
 
 const CERTIFICATIONS = [
-  { icon: "🏅", title: "Version Control", issuer: "Meta" },
-  { icon: "🏅", title: "CPA – Programming Essentials in C++", issuer: "Cisco Networking Academy" },
-  { icon: "🛡️", title: "Cybersecurity Essentials", issuer: "Cisco Networking Academy" },
-  { icon: "🔐", title: "Introduction to Cybersecurity", issuer: "Cisco Networking Academy" },
+  { title: "VERSION CONTROL", issuer: "Meta" },
+  { title: "CPA – PROGRAMMING ESSENTIALS IN C++", issuer: "Cisco Networking Academy" },
+  { title: "CYBERSECURITY ESSENTIALS", issuer: "Cisco Networking Academy" },
+  { title: "INTRODUCTION TO CYBERSECURITY", issuer: "Cisco Networking Academy" },
 ];
 
 export default function PortfolioLanding({ onEnter }) {
@@ -139,12 +126,10 @@ export default function PortfolioLanding({ onEnter }) {
 
   return (
     <div className="landing-page">
-      <ParticleCanvas />
-
       {/* Navigation */}
       <nav className="landing-nav">
         <a href="#hero" className="nav-logo">
-          SM<span>.dev</span>
+          SHIVANSH MEHROTRA
         </a>
         <ul className="nav-links">
           <li><a href="#skills">Skills</a></li>
@@ -157,167 +142,167 @@ export default function PortfolioLanding({ onEnter }) {
 
       {/* Hero */}
       <section id="hero" className="hero-section">
-        <div className="hero-content">
-          <p className="hero-greeting animate-fade-in-up">👋 Hello, I'm</p>
-          <h1 className="hero-name animate-fade-in-up delay-100">
-            Shivansh Mehrotra
-          </h1>
-          <p className="hero-role animate-fade-in-up delay-200">
-            {roleText}
-            <span className="cursor" />
-          </p>
-          <p className="hero-description animate-fade-in-up delay-300">
-            Software Engineer at Evolution Software Solution, specializing in test automation,
-            security testing, and backend development. Building reliable software through
-            robust automation frameworks and AI-integrated workflows.
-          </p>
-          <div className="hero-buttons animate-fade-in-up delay-400">
-            <button onClick={onEnter} className="btn-primary" id="enter-terminal-btn">
-              ⌨ Enter Terminal
-            </button>
-            <a href="#projects" className="btn-secondary">
-              ↓ View Projects
-            </a>
+        <div className="container">
+          <div className="hero-content">
+            <span className="hero-subtitle animate-fade-in-up">
+              {roleText}
+              <span className="cursor" style={{ opacity: isDeleting ? 0 : 1, marginLeft: '4px' }}>|</span>
+            </span>
+            <h1 className="hero-name animate-fade-in-up delay-100">
+              SOFTWARE ENGINEER<br />& AUTOMATION TESTER
+            </h1>
+            <p className="hero-description animate-fade-in-up delay-200">
+              I specialize in robust test automation, security testing, and backend development. 
+              Currently building reliable software with AI-integrated workflows at Evolution Software Solution.
+            </p>
+            <div className="hero-buttons animate-fade-in-up delay-300">
+              <button onClick={onEnter} className="btn-primary" id="enter-terminal-btn">
+                WANT TO KNOW MORE ABOUT ME?
+              </button>
+              <a href="#projects" className="btn-secondary">
+                View Projects
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Skills */}
-      <section id="skills" className={`section ${isVisible("skills") ? "animate-fade-in-up" : ""}`} style={{ opacity: isVisible("skills") ? 1 : 0 }}>
-        <p className="section-label">// what I work with</p>
-        <h2 className="section-title">Technical Skills</h2>
-        <p className="section-subtitle">
-          A blend of testing expertise, backend development, and DevOps tooling.
-        </p>
-        <div className="skills-grid">
-          {SKILLS.map((group, i) => (
-            <div
-              key={group.title}
-              className={`glass-card skill-card ${isVisible("skills") ? "animate-scale-in" : ""}`}
-              style={{ animationDelay: `${i * 0.1}s`, opacity: isVisible("skills") ? undefined : 0 }}
-            >
-              <div className="skill-card-icon">{group.icon}</div>
-              <div className="skill-card-title">{group.title}</div>
-              <div className="skill-card-items">
-                {group.items.map((item) => (
-                  <span key={item} className={`skill-tag ${group.color}`}>
-                    {item}
-                  </span>
-                ))}
+      <section id="skills" className={`section section-alt ${isVisible("skills") ? "animate-fade-in-up" : ""}`} style={{ opacity: isVisible("skills") ? 1 : 0 }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">01 / Technical Stack</span>
+            <h2 className="section-title">SKILLS & TECHNOLOGIES</h2>
+          </div>
+          <div className="grid-layout">
+            {SKILLS.map((group, i) => (
+              <div
+                key={group.title}
+                className={`swiss-card ${isVisible("skills") ? "animate-fade-in-up" : ""}`}
+                style={{ animationDelay: `${i * 0.1}s`, opacity: isVisible("skills") ? undefined : 0 }}
+              >
+                <h3 className="card-title">{group.title}</h3>
+                <div className="tags-wrapper">
+                  {group.items.map((item) => (
+                    <span key={item} className="swiss-tag">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Experience */}
       <section id="experience" className={`section ${isVisible("experience") ? "animate-fade-in-up" : ""}`} style={{ opacity: isVisible("experience") ? 1 : 0 }}>
-        <p className="section-label">// where I've worked</p>
-        <h2 className="section-title">Experience</h2>
-        <p className="section-subtitle">
-          Building automation frameworks and backend systems at scale.
-        </p>
-        <div className="timeline">
-          <div className={`glass-card timeline-item ${isVisible("experience") ? "animate-slide-in-left" : ""}`} style={{ opacity: isVisible("experience") ? undefined : 0 }}>
-            <div className="timeline-date">Jul 2024 — Present</div>
-            <div className="timeline-role">Software Engineer — Automation Test Engineer / Backend Developer</div>
-            <div className="timeline-company">Evolution Software Solution · Noida, Sector 62</div>
-            <ul className="timeline-desc">
-              <li>
-                <strong>Cainz:</strong> Developed Selenium WebDriver automation frameworks with Java & TestNG, automating 150+ regression and functional test scenarios.
-              </li>
-              <li>
-                <strong>PetX:</strong> Executed Functional, Smoke & Regression Testing for an AI-driven mobile app across Android & iOS using Appium.
-              </li>
-              <li>
-                <strong>WarpX:</strong> Built API & UI automation with Python/Pytest, integrated Mistral API, connected CI/CD via GitHub Actions & Docker.
-              </li>
-            </ul>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">02 / Professional Journey</span>
+            <h2 className="section-title">EXPERIENCE</h2>
           </div>
+          
+          <div className="experience-list">
+            <div className="experience-item">
+              <div className="exp-date">JUL 2024 — PRESENT</div>
+              <div className="exp-role">Software Engineer — Automation Test Engineer / Backend Developer</div>
+              <div className="exp-company">Evolution Software Solution · Noida</div>
+              <ul className="exp-details">
+                <li><strong>Cainz:</strong> Developed Selenium WebDriver automation frameworks with Java & TestNG, automating 150+ regression and functional test scenarios.</li>
+                <li><strong>PetX:</strong> Executed Functional, Smoke & Regression Testing for an AI-driven mobile app across Android & iOS using Appium.</li>
+                <li><strong>WarpX:</strong> Built API & UI automation with Python/Pytest, integrated Mistral API, connected CI/CD via GitHub Actions & Docker.</li>
+              </ul>
+            </div>
 
-          <div className={`glass-card timeline-item ${isVisible("experience") ? "animate-slide-in-left delay-200" : ""}`} style={{ opacity: isVisible("experience") ? undefined : 0 }}>
-            <div className="timeline-date">Nov 2020 — Jul 2024</div>
-            <div className="timeline-role">B.Tech, Computer Science</div>
-            <div className="timeline-company">Feroze Gandhi Institute of Engineering and Technology · Raebareli, India</div>
-            <ul className="timeline-desc">
-              <li>GPA: 8.6 / 10</li>
-            </ul>
+            <div className="experience-item">
+              <div className="exp-date">NOV 2020 — JUL 2024</div>
+              <div className="exp-role">B.Tech, Computer Science</div>
+              <div className="exp-company">Feroze Gandhi Institute of Engineering and Technology · Raebareli</div>
+              <ul className="exp-details">
+                <li>Graduated with a GPA of 8.6 / 10</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Projects */}
-      <section id="projects" className={`section ${isVisible("projects") ? "animate-fade-in-up" : ""}`} style={{ opacity: isVisible("projects") ? 1 : 0 }}>
-        <p className="section-label">// what I've built</p>
-        <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">
-          Automation frameworks, full-stack apps, and AI integrations.
-        </p>
-        <div className="projects-grid">
-          {PROJECTS.map((project, i) => (
-            <div
-              key={project.title}
-              className={`glass-card project-card ${isVisible("projects") ? "animate-scale-in" : ""}`}
-              style={{ animationDelay: `${i * 0.1}s`, opacity: isVisible("projects") ? undefined : 0 }}
-            >
-              <div className="project-card-title">{project.title}</div>
-              <div className="project-card-desc">{project.desc}</div>
-              <div className="project-card-tech">
-                {project.tech.map((t) => (
-                  <span key={t} className="skill-tag">
-                    {t}
-                  </span>
-                ))}
+      <section id="projects" className={`section section-alt ${isVisible("projects") ? "animate-fade-in-up" : ""}`} style={{ opacity: isVisible("projects") ? 1 : 0 }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">03 / Selected Work</span>
+            <h2 className="section-title">PROJECTS</h2>
+          </div>
+          
+          <div className="grid-layout">
+            {PROJECTS.map((project, i) => (
+              <div
+                key={project.title}
+                className={`swiss-card ${isVisible("projects") ? "animate-fade-in-up" : ""}`}
+                style={{ animationDelay: `${i * 0.1}s`, opacity: isVisible("projects") ? undefined : 0 }}
+              >
+                <h3 className="card-title">{project.title}</h3>
+                <p className="card-desc">{project.desc}</p>
+                <div className="tags-wrapper">
+                  {project.tech.map((t) => (
+                    <span key={t} className="swiss-tag">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Certifications */}
       <section id="certifications" className={`section ${isVisible("certifications") ? "animate-fade-in-up" : ""}`} style={{ opacity: isVisible("certifications") ? 1 : 0 }}>
-        <p className="section-label">// credentials</p>
-        <h2 className="section-title">Certifications</h2>
-        <div className="certs-grid">
-          {CERTIFICATIONS.map((cert, i) => (
-            <div
-              key={cert.title}
-              className={`glass-card cert-card ${isVisible("certifications") ? "animate-scale-in" : ""}`}
-              style={{ animationDelay: `${i * 0.1}s`, opacity: isVisible("certifications") ? undefined : 0 }}
-            >
-              <span className="cert-icon">{cert.icon}</span>
-              <div>
-                <div className="cert-title">{cert.title}</div>
-                <div className="cert-issuer">{cert.issuer}</div>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">04 / Credentials</span>
+            <h2 className="section-title">CERTIFICATIONS</h2>
+          </div>
+          
+          <div className="grid-layout">
+            {CERTIFICATIONS.map((cert, i) => (
+              <div
+                key={cert.title}
+                className={`swiss-card ${isVisible("certifications") ? "animate-fade-in-up" : ""}`}
+                style={{ animationDelay: `${i * 0.1}s`, opacity: isVisible("certifications") ? undefined : 0 }}
+              >
+                <h3 className="card-title">{cert.title}</h3>
+                <p className="card-desc">{cert.issuer}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Contact */}
       <section id="contact" className={`section contact-section ${isVisible("contact") ? "animate-fade-in-up" : ""}`} style={{ opacity: isVisible("contact") ? 1 : 0 }}>
-        <p className="section-label">// let's connect</p>
-        <h2 className="section-title">Get In Touch</h2>
-        <p className="section-subtitle" style={{ margin: "0 auto 2rem" }}>
-          Interested in working together or just want to say hi? Feel free to reach out!
-        </p>
-        <div className="contact-links">
-          <a href="mailto:shivanshmehrotra308@gmail.com" className="glass-card contact-link" id="contact-email">
-            ✉ shivanshmehrotra308@gmail.com
-          </a>
-          <a href="https://github.com/EVIL3367" target="_blank" rel="noopener noreferrer" className="glass-card contact-link" id="contact-github">
-            ⌂ GitHub
-          </a>
-          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="glass-card contact-link" id="contact-linkedin">
-            ∞ LinkedIn
-          </a>
+        <div className="container">
+          <span className="section-label">05 / Connect</span>
+          <h2 className="section-title">GET IN TOUCH</h2>
+          
+          <div className="contact-links">
+            <a href="mailto:shivanshmehrotra308@gmail.com" className="contact-link" id="contact-email">
+              EMAIL
+            </a>
+            <a href="https://github.com/EVIL3367" target="_blank" rel="noopener noreferrer" className="contact-link" id="contact-github">
+              GITHUB
+            </a>
+            <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="contact-link" id="contact-linkedin">
+              LINKEDIN
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="landing-footer">
-        <p>© {new Date().getFullYear()} Shivansh Mehrotra · Built with React & ☕</p>
+      <footer className="footer">
+        © {new Date().getFullYear()} SHIVANSH MEHROTRA · BUILT WITH REACT
       </footer>
     </div>
   );
